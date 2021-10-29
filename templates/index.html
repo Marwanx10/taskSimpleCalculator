@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>simple Calculator</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .calc {
+            background-color: darkgrey;
+            height: 600px;
+            width: 400px;
+            margin-left: 35%;
+            margin-top: 4%;
+            border-radius: 3%;
+            padding: 1%;
+        }
+
+        .screen {
+            background-color: whitesmoke;
+            margin-left: 6.2%;
+            height: 100px;
+            width: 350px;
+            border-radius: 3%;
+
+        }
+
+        .buttons {
+            padding-top: 5%;
+            margin-top: 4%;
+            background-color: whitesmoke;
+            margin-left: 6.2%;
+            height: 450px;
+            width: 350px;
+            border-radius: 3%;
+        }
+
+        .ac {
+            width: 41%;
+            height: 12%;
+            margin-top: 8%;
+        }
+
+        .regbut {
+            height: 12%;
+            width: 20%;
+
+        }
+
+        .zero {
+            width: 41%;
+            height: 12%;
+        }
+
+        .eq {
+            margin-top: 2%;
+            height: 30%;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <div class="screen" id="result" ,value="0">0</div>
+        <div class="buttons">
+            <input class="ac" type="button" value="AC" onclick="clr()" />
+            <input class="regbut" type="button" value="/" onclick="updateState('/')" />
+            <input class="regbut" type="button" value="*" onclick="updateState('*')" />
+            <br>
+            <input class="regbut" type="button" value="7" onclick="updateResult('7')" />
+            <input class="regbut" type="button" value="8" onclick="updateResult('8')" />
+            <input class="regbut" type="button" value="9" onclick="updateResult('9')" />
+            <input class="regbut" type="button" value="-" onclick="updateState('-')" />
+            <br>
+            <input class="regbut" type="button" value="4" onclick="updateResult('4')" />
+            <input class="regbut" type="button" value="5" onclick="updateResult('5')" />
+            <input class="regbut" type="button" value="6" onclick="updateResult('6')" />
+            <input class="regbut" type="button" value="+" onclick="updateState('+')" />
+            <br>
+            <input class="regbut" type="button" value="1" onclick="updateResult('1')" />
+            <input class="regbut" type="button" value="2" onclick="updateResult('2')" />
+            <input class="regbut" type="button" value="3" onclick="updateResult('3')" />
+            <input class="regbut" type="button" value="%" onclick="updateState('%')" />
+            <br>
+            <input class="zero" type="button" value="0" onclick="updateResult('0')" />
+            <input class="regbut" type="button" value="." onclick="updateResult('.')" />
+            <input class="regbut" type="button" value="^" onclick="updateState('^')" />
+            <br>
+            <form id="form">
+
+                <button class="eq">=</button>
+
+            </form>
+
+
+        </div>
+    </div>
+
+
+</body>
+<script src="../static/home.js"></script>
+
+</html>
