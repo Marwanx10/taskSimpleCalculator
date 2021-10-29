@@ -18,6 +18,8 @@ function updateResult(value) {
     if (localStorage.getItem('state') == 4) {
         if (value == 0)
             document.querySelector("#result").innerText = 0;
+        if (value == ".")
+            document.querySelector("#result").innerText = 0
         localStorage.setItem('state', 0)
     }
     //recieving first operand
@@ -70,6 +72,7 @@ function updateState(operator) {
             localStorage.setItem('operator', operator)
             localStorage.setItem('state', 2)
             document.querySelector("#result").innerText += " " + operator
+
         } else {
             //changing the operand
             if (localStorage.getItem('state') == 2) {
